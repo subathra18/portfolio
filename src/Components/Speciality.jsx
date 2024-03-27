@@ -47,6 +47,7 @@ const Speciality = () => {
               const { skill, image } = item;
               return (
                 <div
+                  key={index}
                   className="animate-slideIn opacity-0 shadow-md shadow-[#040c16]"
                   style={{ "--delay": index * 0.55 + "s" }}
                 >

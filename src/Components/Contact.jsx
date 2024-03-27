@@ -21,9 +21,6 @@ const Contact = () => {
 
         <div className="flex items-start justify-center flex-col gap-10">
           <span className="inline-flex gap-2 text-2xl">
-            <FaMobileAlt className="w-8 h-8 "></FaMobileAlt>9003778060
-          </span>
-          <span className="inline-flex gap-2 text-2xl">
             <IoMailUnreadOutline className="w-8 h-8"></IoMailUnreadOutline>
             subathra.tce@gmail.com
           </span>

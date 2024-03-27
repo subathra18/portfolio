@@ -1,9 +1,9 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 
-const Project = ({ url, image, github, title, text, id }) => {
+const Project = ({ url, image, github, title, text }) => {
   return (
-    <article className="rounded-lg shadow-md hover:shadow-2xl duration-300">
+    <article className="rounded-lg shadow-md hover:shadow-3xl duration-300">
       <img
         src={image}
         alt={title}
@@ -11,13 +11,13 @@ const Project = ({ url, image, github, title, text, id }) => {
       />
       <div className="capitalize p-4">
         <h2 className="text-xl tracking-wide font-medium">{title}</h2>
-        <p className="mt-4 text-slate-700 leading-loose">{text}</p>
+        <p className="mt-4 text-slate-500 leading-loose">{text}</p>
         <div className="mt-4 flex gap-x-4">
           <a href={url}>
-            <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+            <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-slate-400 duration-300" />
           </a>
           <a href={github}>
-            <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+            <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-slate-400 duration-300" />
           </a>
         </div>
       </div>
