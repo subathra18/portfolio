@@ -2,9 +2,19 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    fontFamily: {
+      primary: "Orbitron",
+      secondary: "Rajdhani",
+    },
     extend: {
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
+      colors: {
+        pinkText: "#B809C3",
+      },
+      backgroundImage: {
+        workBG: "url('./assets/site-bg.jpg')",
       },
       keyframes: {
         slideIn: {

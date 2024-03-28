@@ -1,27 +1,30 @@
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import React from "react";
+import { FaGithubSquare } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 
-const Project = ({ url, image, github, title, text }) => {
+const Project = ({ image, github, url, title }) => {
   return (
-    <article className="rounded-lg shadow-md hover:shadow-3xl duration-300">
+    <div className="w-full h-full group relative overflow-hidden border-2 border-white/50 rounded-xl">
+      <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
       <img
         src={image}
-        alt={title}
-        className="w-full object-cover rounded-t-lg h-52"
-      />
-      <div className="capitalize p-4">
-        <h2 className="text-xl tracking-wide font-medium">{title}</h2>
-        <p className="mt-4 text-slate-500 leading-loose">{text}</p>
-        <div className="mt-4 flex gap-x-4">
+        className="h-full w-full group-hover:scale-125 transition-all duration-500"
+      ></img>
+      <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+        <span className="text-gradient">{title}</span>
+      </div>
+      <div className=" absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50 ">
+        <div className="flex gap-3">
           <a href={url}>
-            <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-slate-400 duration-300" />
+            <TbWorldWww className="h-8 w-8 text-white-500 hover:text-white-400 duration-300" />
           </a>
           <a href={github}>
-            <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-slate-400 duration-300" />
+            <FaGithubSquare className="h-8 w-8 text-white-500 hover:text-white-400 duration-300" />
           </a>
         </div>
       </div>
-    </article>
+    </div>
   );
 };
+
 export default Project;

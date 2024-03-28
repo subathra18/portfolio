@@ -1,10 +1,10 @@
 import React from "react";
-import avatar from "../assets/avatar1.svg";
+import avatar from "../assets/avatar.svg";
 import Speciality from "./Speciality";
 
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen bg-[#0a192f]">
+    <div name="home" className="w-full h-screen ">
       <div className="w-72 h-72 pt-5 m-auto">
         <img src={avatar}></img>
       </div>

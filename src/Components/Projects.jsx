@@ -1,63 +1,47 @@
 import React from "react";
 import Project from "./Project";
-import Pomodoro from "../assets/pomodoro.png";
-import MessageCopy from "../assets/MessageCopy.png";
-import Madlib from "../assets/Madlib.png";
-import ImageLibrary from "../assets/imageLibrary.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../anim";
+import { ProjectList } from "../projectList";
 
 const Projects = () => {
-  const list = [
-    {
-      name: "MessageCopy",
-      url: "https://majestic-meerkat-ce4c22.netlify.app",
-      image: MessageCopy,
-      github: "https://github.com/subathra18/MessageCopy",
-      title: "Message Copy",
-      text: "A website for all your messaging needs",
-    },
-    {
-      name: "pomodoro",
-      url: "https://elegant-kleicha-aac618.netlify.app",
-      image: Pomodoro,
-      github: "https://github.com/subathra18/pomodoro",
-      title: "POMODORO App",
-      text: "Website that helps you with timed tasks",
-    },
-    {
-      name: "Image Library",
-      url: "https://genuine-daifuku-6cd0b3.netlify.app",
-      image: ImageLibrary,
-      github: "https://github.com/subathra18/imageLibrary",
-      title: "Image Library",
-      text: "An image search app",
-    },
-    {
-      name: "Madlib",
-      url: "https://singular-kashata-a1029d.netlify.app",
-      image: Madlib,
-      github: "https://github.com/subathra18/madlibPoem",
-      title: "Madlib",
-      text: "Pens a poem from your inputs",
-    },
-  ];
   return (
-    <div name="skills" className="w-full  bg-[#112138] text-gray-300">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full ">
-        <div>
-          <p className="text-4xl font-bold inline border-b-4 border-pink-600 ">
-            Projects
-          </p>
-          <div
-            className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-16 pt-10"
-            style={{ "--delay": 1 * 0.55 + "s" }}
+    <section className="font-primary h-screen  text-gray-300 flex items-center py-8 lg:py-24 px-10">
+      <div className="mx-auto p-16">
+        <div className="flex flex-col lg:flex-row gap-x-10">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 flex flex-col gap-y-3 lg:gap-y-12 "
           >
-            {list.map((item, index) => {
-              return <Project key={index} {...item}></Project>;
-            })}
-          </div>
+            <div>
+              <h2 className="h2 leading-tight text-pink-500 font-bold">
+                My Work
+              </h2>
+              <p className="font-secondary max-w-sm lg:mb-16 tracking-wide text-xl">
+                coded with React ,Redux ,Hooks,Tailwind
+              </p>
+            </div>
+            <div className="lg:h-1/2 w-full flex flex-col lg:flex-row gap-y-3 gap-x-5">
+              <Project {...ProjectList[0]}></Project>
+              <Project {...ProjectList[1]}></Project>
+            </div>
+          </motion.div>
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="pt-5 flex-1 flex flex-col gap-y-3 lg:gap-10 "
+          >
+            <Project {...ProjectList[2]}></Project>
+            <Project {...ProjectList[3]}></Project>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

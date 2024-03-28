@@ -5,3 +5,12 @@
 .skills {
   opacity: 1;
 }
+
+@layer base {
+  .h2 {
+    @apply text-[32px] mb-6 tracking-[10%] uppercase;
+  }
+  .text-gradient {
+    @apply text-2xl bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#db2777] font-bold  hover:from-[#FF56F6] hover:to-[#db2777];
+  }
+}

@@ -40,7 +40,7 @@ const Speciality = () => {
   ];
   return (
     <div className="mt-8">
-      <div name="skills" className="bg-[#0a192f] text-gray-300">
+      <div name="skills" className=" text-gray-300">
         <div className="max-w-[1000px] mx-auto  flex flex-col justify-center ">
           <div className="w-full grid grid-cols-4 sm:grid-cols-8 gap-2 text-center ">
             {specialities.map((item, index) => {
