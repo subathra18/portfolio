@@ -15,8 +15,11 @@ const Contact = () => {
       </div>
 
       <div className=" h-5/6 grid grid-cols-1 lg:grid-cols-2  gap-12 ">
-        <div className="hidden lg:block flex items-center justify-end ">
-          <img className="w-72 h-72" src={contact}></img>
+        <div className="flex hidden lg:flex  items-center justify-end  ">
+          <img
+            className="w-72 h-72 opacity-85 motion-safe:animate-slideBounce duration-300"
+            src={contact}
+          ></img>
         </div>
 
         <div className="flex items-center lg:items-start justify-center flex-col gap-10 font-primary">
